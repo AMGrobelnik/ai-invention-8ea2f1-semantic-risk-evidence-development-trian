@@ -1,0 +1,85 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
+\HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldnewlabel\newlabel
+\gdef\newlabel#1#2{\newlabelxx{#1}#2}
+\gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
+\AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\newlabel\oldnewlabel
+\fi}
+\fi}
+\global\let\hyper@last\relax 
+\gdef\HyperFirstAtBeginDocument#1{#1}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{Leetaru2013}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
+\citation{Mack1993}
+\citation{Venter1998}
+\citation{Bornhuetter1972}
+\citation{Soleimani2025}
+\citation{Dolphin2026}
+\citation{Wang2024}
+\citation{Nygaard2024}
+\citation{Peress2014}
+\citation{Troxler2022}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces The Semantic Risk Evidence Development Triangle (SREDT) framework. LLM-generated risk scenarios populate the rows; five ontological abstraction levels (L0--L4) populate the columns. Training scenarios (top rows) have all five levels observed; test scenarios evaluated at day 45 have L3--L4 latent (shaded), creating the triangular missing-data structure. Venter dual-criterion diagnostics select the projection method (chain-ladder, factor-plus-constant, or BF fallback) per transition before projecting latent values.\relax }}{3}{figure.caption.1}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:fig1}{{1}{3}{The Semantic Risk Evidence Development Triangle (SREDT) framework. LLM-generated risk scenarios populate the rows; five ontological abstraction levels (L0--L4) populate the columns. Training scenarios (top rows) have all five levels observed; test scenarios evaluated at day 45 have L3--L4 latent (shaded), creating the triangular missing-data structure. Venter dual-criterion diagnostics select the projection method (chain-ladder, factor-plus-constant, or BF fallback) per transition before projecting latent values.\relax }{figure.caption.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Related Work}{3}{section.2}\protected@file@percent }
+\citation{Ou2023}
+\citation{Chen2024}
+\citation{Grootendorst2022}
+\citation{Reimers2019}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Methodology}{4}{section.3}\protected@file@percent }
+\newlabel{sec:methodology}{{3}{4}{Methodology}{section.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Ontological Column Structure}{4}{subsection.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Relevance-Density Mass}{4}{subsection.3.2}\protected@file@percent }
+\citation{Venter1998}
+\citation{Bornhuetter1972}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Venter Dual Diagnostic Criterion}{5}{subsection.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Cross-Scenario Triangular Structure}{5}{subsection.3.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}Experimental Setup}{5}{section.4}\protected@file@percent }
+\newlabel{sec:setup}{{4}{5}{Experimental Setup}{section.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Scenario Generation}{5}{subsection.4.1}\protected@file@percent }
+\citation{Leetaru2013}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Distribution of GDELT article counts per training scenario at the day-45 evaluation midpoint versus the day-90 window end (30 training scenarios). The gap confirms genuine triangular missing-data structure: on average 62.7\% of eventual articles have appeared by day 45, validating that L3--L4 semantic development is genuinely latent at test evaluation time.\relax }}{6}{figure.caption.2}\protected@file@percent }
+\newlabel{fig:fig2}{{2}{6}{Distribution of GDELT article counts per training scenario at the day-45 evaluation midpoint versus the day-90 window end (30 training scenarios). The gap confirms genuine triangular missing-data structure: on average 62.7\% of eventual articles have appeared by day 45, validating that L3--L4 semantic development is genuinely latent at test evaluation time.\relax }{figure.caption.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}News Article Retrieval (L0)}{6}{subsection.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Ground Truth and Baselines}{7}{subsection.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5}Results}{7}{section.5}\protected@file@percent }
+\newlabel{sec:results}{{5}{7}{Results}{section.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Venter Diagnostics with Real GDELT Data}{7}{subsection.5.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Venter dual-criterion diagnostics (real GDELT data, 30 training scenarios). Chain-ladder is applicable only when CV $< 0.30$ AND intercept is non-significant ($|a| < 2\cdot $SE($a$)). ``BF'' = Bornhuetter-Ferguson fallback.\relax }}{7}{table.caption.3}\protected@file@percent }
+\newlabel{tab:venter}{{1}{7}{Venter dual-criterion diagnostics (real GDELT data, 30 training scenarios). Chain-ladder is applicable only when CV $< 0.30$ AND intercept is non-significant ($|a| < 2\cdot $SE($a$)). ``BF'' = Bornhuetter-Ferguson fallback.\relax }{table.caption.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Venter regression scatter plots for all four SREDT level transitions (30 training scenarios, real GDELT data). Each panel plots $C(i,j)$ vs.\nobreakspace  {}$C(i,j+1)$ with the OLS regression line and 95\% confidence band. The L1$\to $L2 panel (top right) shows the only chain-ladder-valid transition: low scatter around the regression line (CV=0.274, $R^2=0.841$, non-significant intercept). The L2$\to $L3 and L3$\to $L4 panels exhibit high scatter (CV=0.715 and 0.661), indicating BF fallback.\relax }}{8}{figure.caption.4}\protected@file@percent }
+\newlabel{fig:fig3}{{3}{8}{Venter regression scatter plots for all four SREDT level transitions (30 training scenarios, real GDELT data). Each panel plots $C(i,j)$ vs.~$C(i,j+1)$ with the OLS regression line and 95\% confidence band. The L1$\to $L2 panel (top right) shows the only chain-ladder-valid transition: low scatter around the regression line (CV=0.274, $R^2=0.841$, non-significant intercept). The L2$\to $L3 and L3$\to $L4 panels exhibit high scatter (CV=0.715 and 0.661), indicating BF fallback.\relax }{figure.caption.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Reclassification of Original Experiment Results}{8}{subsection.5.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Projected SREDT scores and flat cosine scores for all 10 test scenarios, sorted by SREDT score. The one materialized scenario (ING Group, reputational risk, marked with $\star $) received the lowest SREDT score (0.181) due to synthetic-fallback articles deflating its observed levels. Flat cosine more closely tracks actual article relevance for the materialized scenario.\relax }}{9}{figure.caption.6}\protected@file@percent }
+\newlabel{fig:fig4}{{4}{9}{Projected SREDT scores and flat cosine scores for all 10 test scenarios, sorted by SREDT score. The one materialized scenario (ING Group, reputational risk, marked with $\star $) received the lowest SREDT score (0.181) due to synthetic-fallback articles deflating its observed levels. Flat cosine more closely tracks actual article relevance for the materialized scenario.\relax }{figure.caption.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Prediction Performance}{9}{subsection.5.3}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Test scenario prediction metrics against LLM-judge ground truth (10 test scenarios, 1 materialized). Lower Brier score is better. SREDT underperforms flat cosine on all metrics.\relax }}{9}{table.caption.5}\protected@file@percent }
+\newlabel{tab:scores}{{2}{9}{Test scenario prediction metrics against LLM-judge ground truth (10 test scenarios, 1 materialized). Lower Brier score is better. SREDT underperforms flat cosine on all metrics.\relax }{table.caption.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Discussion}{10}{section.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}What the Results Establish}{10}{subsection.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Why the Synthetic Results Were Misleading}{10}{subsection.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Limitations}{10}{subsection.6.3}\protected@file@percent }
+\bibstyle{plainnat}
+\bibdata{references}
+\bibcite{Bornhuetter1972}{{1}{1972}{{Bornhuetter and Ferguson}}{{}}}
+\bibcite{Chen2024}{{2}{2024}{{Chen et~al.}}{{Chen, Wang, Chen, Yu, Ma, Zhao, Yu, and Zhang}}}
+\bibcite{Dolphin2026}{{3}{2026}{{Dolphin et~al.}}{{Dolphin, Dursun, Blankenship, Adams, and Pike}}}
+\bibcite{Grootendorst2022}{{4}{2022}{{Grootendorst}}{{}}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Conclusion}{11}{section.7}\protected@file@percent }
+\bibcite{Leetaru2013}{{5}{2013}{{Leetaru and Schrodt}}{{}}}
+\bibcite{Mack1993}{{6}{1993}{{Mack}}{{}}}
+\bibcite{Nygaard2024}{{7}{2024}{{Nygaard et~al.}}{{Nygaard, Upadhyay, Hinkle, Skotti, Halliwell, Brown, and Noronha}}}
+\bibcite{Ou2023}{{8}{2023}{{Ou et~al.}}{{Ou, Pratapa, Gupta, and Mitamura}}}
+\bibcite{Peress2014}{{9}{2014}{{Peress}}{{}}}
+\bibcite{Reimers2019}{{10}{2019}{{Reimers and Gurevych}}{{}}}
+\bibcite{Soleimani2025}{{11}{2025}{{Soleimani}}{{}}}
+\bibcite{Troxler2022}{{12}{2022}{{Troxler and Schelldorfer}}{{}}}
+\bibcite{Venter1998}{{13}{1998}{{Venter}}{{}}}
+\bibcite{Wang2024}{{14}{2024}{{Wang et~al.}}{{Wang, Feng, Qiu, Gu, and Zhao}}}
+\gdef \@abspage@last{12}

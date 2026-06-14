@@ -1,0 +1,15 @@
+{
+  "title": "SREDT: Actuarial Chain-Ladder Projection for LLM Risk Scenario Validation",
+  "summary": "Generated a 12-page publication-ready LaTeX paper titled 'Semantic Risk Evidence Development Triangles: Actuarial Chain-Ladder Projection for LLM Corporate Risk Scenario Validation'. The paper includes all required sections: Abstract, Introduction, Related Work, Methodology (Ontological Column Structure, Relevance-Density Mass, Venter Dual Diagnostic Criterion, Cross-Scenario Triangular Structure), Experimental Setup (Scenario Generation, News Article Retrieval, Ground Truth and Baselines), Results (Venter Diagnostics with Real GDELT Data, Reclassification of Original Experiment Results, Prediction Performance), Discussion (What the Results Establish, Why the Synthetic Results Were Misleading, Limitations), and Conclusion. All 4 figures were included: fig1_v0.jpg (SREDT Framework Architecture, figure* full-width), fig2_v0.jpg (Empirical Article Count Distribution, figure* full-width), fig3_v0.jpg (Venter Diagnostics Scatter Plots, figure* full-width), fig4_v0.jpg (Test Scenario Score Comparison, figure* full-width). Both tables (Venter diagnostics and prediction metrics) are formatted with booktabs. Bibliography was built via Semantic Scholar (11/14 fetched via API; 3 CAS proceedings/conference entries written from verified paper text: Venter1998, Bornhuetter1972, Leetaru2013). The paper compiled successfully to PDF in 4 passes (pdflatex, bibtex.original, pdflatex x2). All 12 pages were visually reviewed at 150 DPI — no layout issues, overlapping figures, or cut-off text detected. All citations resolve correctly.",
+  "out_expected_files": {
+    "paper_tex_path": "paper.tex",
+    "paper_pdf_path": "paper.pdf",
+    "references_bib_path": "references.bib",
+    "figure_paths": [
+      "figures/fig1_v0.jpg",
+      "figures/fig2_v0.jpg",
+      "figures/fig3_v0.jpg",
+      "figures/fig4_v0.jpg"
+    ]
+  }
+}

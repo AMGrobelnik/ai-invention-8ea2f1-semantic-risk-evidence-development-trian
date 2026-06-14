@@ -1,0 +1,108 @@
+\begin{thebibliography}{14}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Bornhuetter and Ferguson(1972)]{Bornhuetter1972}
+R.~L. Bornhuetter and R.~E. Ferguson.
+\newblock The actuary and {IBNR}.
+\newblock \emph{Proceedings of the Casualty Actuarial Society}, LIX:\penalty0
+  181--195, 1972.
+
+\bibitem[Chen et~al.(2024)Chen, Wang, Chen, Yu, Ma, Zhao, Yu, and
+  Zhang]{Chen2024}
+Tong Chen, Hongwei Wang, Sihao Chen, Wenhao Yu, Kaixin Ma, Xinran Zhao, Dong
+  Yu, and Hongming Zhang.
+\newblock Dense {X} retrieval: What retrieval granularity should we use?
+\newblock In \emph{Proceedings of EMNLP 2024}, pages 15159--15177, 2024.
+\newblock \doi{10.48550/arXiv.2312.06648}.
+
+\bibitem[Dolphin et~al.(2026)Dolphin, Dursun, Blankenship, Adams, and
+  Pike]{Dolphin2026}
+Rian Dolphin, Joe Dursun, Jarrett Blankenship, Katie Adams, and Quinton Pike.
+\newblock Taxonomy-aligned risk extraction from 10-k filings with autonomous
+  improvement using {LLMs}.
+\newblock \emph{ArXiv}, abs/2601.15247, 2026.
+\newblock \doi{10.48550/arXiv.2601.15247}.
+
+\bibitem[Grootendorst(2022)]{Grootendorst2022}
+Maarten Grootendorst.
+\newblock {BERTopic}: Neural topic modeling with a class-based {TF-IDF}
+  procedure.
+\newblock \emph{ArXiv}, abs/2203.05794, 2022.
+\newblock \doi{10.48550/arXiv.2203.05794}.
+
+\bibitem[Leetaru and Schrodt(2013)]{Leetaru2013}
+Kalev Leetaru and Philip~A. Schrodt.
+\newblock {GDELT}: Global data on events, location and tone, 1979--2012.
+\newblock In \emph{International Studies Association Annual Convention}, 2013.
+
+\bibitem[Mack(1993)]{Mack1993}
+T.~Mack.
+\newblock Distribution-free calculation of the standard error of chain ladder
+  reserve estimates.
+\newblock \emph{ASTIN Bulletin}, 23:\penalty0 213--225, 1993.
+\newblock \doi{10.2143/AST.23.2.2005092}.
+
+\bibitem[Nygaard et~al.(2024)Nygaard, Upadhyay, Hinkle, Skotti, Halliwell,
+  Brown, and Noronha]{Nygaard2024}
+Adil Nygaard, Ashish Upadhyay, Lauren Hinkle, Xenia Skotti, Jeffrey Halliwell,
+  Ian Brown, and Glen Noronha.
+\newblock News risk alerting system ({NRAS}): A data-driven {LLM} approach to
+  proactive credit risk monitoring.
+\newblock In \emph{Proceedings of EMNLP 2024 (Industry Track)}, pages 429--439,
+  2024.
+\newblock \doi{10.18653/v1/2024.emnlp-industry.32}.
+
+\bibitem[Ou et~al.(2023)Ou, Pratapa, Gupta, and Mitamura]{Ou2023}
+Jiefu Ou, Adithya Pratapa, Rishubh Gupta, and Teruko Mitamura.
+\newblock Hierarchical event grounding.
+\newblock In \emph{Proceedings of the AAAI Conference on Artificial
+  Intelligence}, 2023.
+\newblock \doi{10.48550/arXiv.2302.04197}.
+
+\bibitem[Peress(2014)]{Peress2014}
+Joel Peress.
+\newblock The media and the diffusion of information in financial markets:
+  Evidence from newspaper strikes.
+\newblock \emph{Journal of Finance}, 69\penalty0 (5):\penalty0 2007--2043,
+  2014.
+\newblock \doi{10.1111/JOFI.12179}.
+
+\bibitem[Reimers and Gurevych(2019)]{Reimers2019}
+Nils Reimers and Iryna Gurevych.
+\newblock Sentence-{BERT}: Sentence embeddings using siamese {BERT}-networks.
+\newblock In \emph{Proceedings of EMNLP-IJCNLP 2019}, 2019.
+\newblock \doi{10.18653/v1/D19-1410}.
+
+\bibitem[Soleimani(2025)]{Soleimani2025}
+Masoud Soleimani.
+\newblock {LLM}-generated counterfactual stress scenarios for portfolio risk
+  simulation via hybrid prompt-{RAG} pipeline.
+\newblock \emph{ArXiv}, abs/2512.07867, 2025.
+\newblock \doi{10.48550/arXiv.2512.07867}.
+
+\bibitem[Troxler and Schelldorfer(2022)]{Troxler2022}
+Andrea Troxler and J{\"u}rg Schelldorfer.
+\newblock Actuarial applications of natural language processing using
+  transformers.
+\newblock \emph{British Actuarial Journal}, 29, 2022.
+\newblock \doi{10.1017/S1357321724000023}.
+
+\bibitem[Venter(1998)]{Venter1998}
+Gary~G. Venter.
+\newblock Testing the assumptions of age-to-age factors.
+\newblock \emph{Proceedings of the Casualty Actuarial Society}, LXXXV:\penalty0
+  807--847, 1998.
+
+\bibitem[Wang et~al.(2024)Wang, Feng, Qiu, Gu, and Zhao]{Wang2024}
+Xinlei Wang, Maike Feng, Jing Qiu, Jinjin Gu, and Junhua Zhao.
+\newblock From news to forecast: Integrating event analysis in {LLM}-based time
+  series forecasting with reflection.
+\newblock In \emph{Advances in Neural Information Processing Systems
+  (NeurIPS)}, 2024.
+\newblock \doi{10.48550/arXiv.2409.17515}.
+
+\end{thebibliography}
