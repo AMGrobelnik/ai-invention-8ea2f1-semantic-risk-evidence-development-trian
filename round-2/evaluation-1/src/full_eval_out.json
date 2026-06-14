@@ -1,0 +1,652 @@
+{
+  "metadata": {
+    "evaluation_name": "SREDT_Venter_Bootstrap_Reanalysis",
+    "description": "Rigorous re-analysis of iter_1 SREDT experiment with bootstrap CIs (B=1000), Venter (1998) intercept reclassification, sector stratification, and 4 publication-quality figures.",
+    "data_source": "baseline_experiment_iter1",
+    "data_quality": {
+      "l0_std": 0.0,
+      "l0_constant": true,
+      "l0_unique_values": [
+        3.044522437723423
+      ],
+      "n_articles_unique": [
+        20
+      ],
+      "n_articles_constant": true,
+      "keyword_freq_unique": [
+        1.0
+      ],
+      "keyword_freq_constant": true,
+      "unique_company_risk_pairs": 12,
+      "n_train": 40,
+      "repetition_ratio": 3.33,
+      "n_valid_llm_labels": 0,
+      "all_labels_missing": true,
+      "keyword_freq_std_train": 0.0,
+      "flag": "SYNTHETIC_DATA"
+    },
+    "bootstrap_ci": [
+      {
+        "transition": "L0→L1",
+        "f_j_observed": 0.22297939265721978,
+        "f_j_lower": 0.19317678222640644,
+        "f_j_upper": 0.2541564452155905,
+        "cv_observed": null,
+        "cv_lower": null,
+        "cv_upper": null,
+        "intercept_observed": null,
+        "intercept_lower": null,
+        "intercept_upper": null,
+        "intercept_p_bootstrap": null,
+        "intercept_includes_zero_in_95ci": null
+      },
+      {
+        "transition": "L1→L2",
+        "f_j_observed": 1.1873002634311347,
+        "f_j_lower": 1.106547283507969,
+        "f_j_upper": 1.2811376321488348,
+        "cv_observed": 0.31095107741750583,
+        "cv_lower": 0.25593269268716007,
+        "cv_upper": 0.3464837474815451,
+        "intercept_observed": 0.3672454680334792,
+        "intercept_lower": 0.3051980420102352,
+        "intercept_upper": 0.4235854091856442,
+        "intercept_p_bootstrap": 0.995,
+        "intercept_includes_zero_in_95ci": false
+      },
+      {
+        "transition": "L2→L3",
+        "f_j_observed": 1.5172336531647561,
+        "f_j_lower": 1.3611226593574,
+        "f_j_upper": 1.6985586878129275,
+        "cv_observed": 0.38640783798743367,
+        "cv_lower": 0.3166592586820894,
+        "cv_upper": 0.4450941089167173,
+        "intercept_observed": 1.2497304945152725,
+        "intercept_lower": 0.9785225632509724,
+        "intercept_upper": 1.478679557843163,
+        "intercept_p_bootstrap": 0.935,
+        "intercept_includes_zero_in_95ci": false
+      },
+      {
+        "transition": "L3→L4",
+        "f_j_observed": 1.598480854953191,
+        "f_j_lower": 1.506523128998912,
+        "f_j_upper": 1.7023967275861307,
+        "cv_observed": 0.29389874104304503,
+        "cv_lower": 0.2035251979027469,
+        "cv_upper": 0.34292559696122,
+        "intercept_observed": 1.5731026347104318,
+        "intercept_lower": 1.3002561196411149,
+        "intercept_upper": 1.7409190182716099,
+        "intercept_p_bootstrap": 0.888,
+        "intercept_includes_zero_in_95ci": false
+      }
+    ],
+    "sector_diagnostics": {
+      "energy": {
+        "n_total": 20,
+        "n_unique_company_risk": 6,
+        "transitions": [
+          {
+            "transition": "L1→L2",
+            "n": 20,
+            "f_j": 1.6245583372076586,
+            "cv": 0.1975240240433925,
+            "individual_ratios": [
+              2.2050046702716193,
+              1.9491380074742932,
+              1.3047292056296413,
+              1.3334715080954673,
+              1.5240451722293946,
+              1.6222210804757458,
+              2.2050046702716193,
+              1.9491380074742932,
+              1.3047292056296413,
+              1.3334715080954673,
+              1.5240451722293946,
+              1.6222210804757458,
+              2.2050046702716193,
+              1.9491380074742932,
+              1.3047292056296413,
+              1.3334715080954673,
+              1.5240451722293946,
+              1.6222210804757458,
+              2.2050046702716193,
+              1.9491380074742932
+            ],
+            "slope": 0.7482363388962363,
+            "intercept": 0.33910229986197793,
+            "se_intercept": 0.06141899497045977,
+            "t_stat": 5.521130719007587,
+            "p_value": 3.0488195163602683e-05,
+            "intercept_significant": true,
+            "r_squared": 0.5739269735817133,
+            "verdict_cv_only": "chain_ladder_valid",
+            "verdict_corrected": "factor_plus_constant",
+            "n_unique_x": 6
+          },
+          {
+            "transition": "L2→L3",
+            "n": 20,
+            "f_j": 1.9360771524769609,
+            "cv": 0.3277856228326837,
+            "individual_ratios": [
+              2.4829405175570756,
+              1.7828703213544412,
+              0.7173669286341469,
+              1.932693070090316,
+              2.3980131926548203,
+              2.9143793355715006,
+              2.4829405175570756,
+              1.7828703213544412,
+              0.7173669286341469,
+              1.932693070090316,
+              2.3980131926548203,
+              2.9143793355715006,
+              2.4829405175570756,
+              1.7828703213544412,
+              0.7173669286341469,
+              1.932693070090316,
+              2.3980131926548203,
+              2.9143793355715006,
+              2.4829405175570756,
+              1.7828703213544412
+            ],
+            "slope": -1.423411464991417,
+            "intercept": 2.1119104862597418,
+            "se_intercept": 0.31361438984133566,
+            "t_stat": 6.734099437618928,
+            "p_value": 2.596850931180228e-06,
+            "intercept_significant": true,
+            "r_squared": 0.31856511002784393,
+            "verdict_cv_only": "borderline",
+            "verdict_corrected": "factor_plus_constant",
+            "n_unique_x": 6
+          },
+          {
+            "transition": "L3→L4",
+            "n": 20,
+            "f_j": 1.5083591835473416,
+            "cv": 0.37140669230110046,
+            "individual_ratios": [
+              1.3429933157921823,
+              1.4366433052675391,
+              3.0829507400131835,
+              1.2833100149288628,
+              1.3283744356519929,
+              1.5541258789666894,
+              1.3398769775995647,
+              1.438107517041401,
+              3.086238018807703,
+              1.2838971260032688,
+              1.3242344280093732,
+              1.5463041730092135,
+              1.3491655519576626,
+              1.4307629963545334,
+              3.0657382525904295,
+              1.2683074894669661,
+              1.3247032815765982,
+              1.5593610599617311,
+              1.3438948613295256,
+              1.4406706859027656
+            ],
+            "slope": 0.2629519373105003,
+            "intercept": 1.5157807272215067,
+            "se_intercept": 0.16737874977691117,
+            "t_stat": 9.055992646867045,
+            "p_value": 4.015420129732661e-08,
+            "intercept_significant": true,
+            "r_squared": 0.1767549806473941,
+            "verdict_cv_only": "borderline",
+            "verdict_corrected": "factor_plus_constant",
+            "n_unique_x": 6
+          }
+        ]
+      },
+      "financials": {
+        "n_total": 20,
+        "n_unique_company_risk": 6,
+        "transitions": [
+          {
+            "transition": "L1→L2",
+            "n": 20,
+            "f_j": 1.0130039482701365,
+            "cv": 0.08027498446888093,
+            "individual_ratios": [
+              1.1058318377227763,
+              0.9258233930142457,
+              1.1184015763535324,
+              0.9195827282049689,
+              0.9661493091742392,
+              1.0309017983561763,
+              1.1058318377227763,
+              0.9258233930142457,
+              1.1184015763535324,
+              0.9195827282049689,
+              0.9661493091742392,
+              1.0309017983561763,
+              1.1058318377227763,
+              0.9258233930142457,
+              1.1184015763535324,
+              0.9195827282049689,
+              0.9661493091742392,
+              1.0309017983561763,
+              1.1058318377227763,
+              0.9258233930142457
+            ],
+            "slope": 1.0261909639068518,
+            "intercept": -0.012801568195390689,
+            "se_intercept": 0.15454532361996487,
+            "t_stat": -0.08283374673225585,
+            "p_value": 0.9348979498197685,
+            "intercept_significant": false,
+            "r_squared": 0.7007704254172741,
+            "verdict_cv_only": "chain_ladder_valid",
+            "verdict_corrected": "chain_ladder_valid",
+            "n_unique_x": 6
+          },
+          {
+            "transition": "L2→L3",
+            "n": 20,
+            "f_j": 1.2494856004473531,
+            "cv": 0.19050082131502177,
+            "individual_ratios": [
+              1.364020918479606,
+              1.2141214746970206,
+              0.8052891248997699,
+              1.2546820452861789,
+              1.6609012705818529,
+              1.2497165654400382,
+              1.364020918479606,
+              1.2141214746970206,
+              0.8052891248997699,
+              1.2546820452861789,
+              1.6609012705818529,
+              1.2497165654400382,
+              1.364020918479606,
+              1.2141214746970206,
+              0.8052891248997699,
+              1.2546820452861789,
+              1.6609012705818529,
+              1.2497165654400382,
+              1.364020918479606,
+              1.2141214746970206
+            ],
+            "slope": 0.6629031127714181,
+            "intercept": 0.576842013413354,
+            "se_intercept": 0.3810148739956858,
+            "t_stat": 1.5139619284781136,
+            "p_value": 0.1473971060099517,
+            "intercept_significant": false,
+            "r_squared": 0.1424335467583924,
+            "verdict_cv_only": "chain_ladder_valid",
+            "verdict_corrected": "chain_ladder_valid",
+            "n_unique_x": 6
+          },
+          {
+            "transition": "L3→L4",
+            "n": 20,
+            "f_j": 1.687748727281849,
+            "cv": 0.19749610790812294,
+            "individual_ratios": [
+              1.535456377099221,
+              1.563217121938953,
+              2.1244627657328237,
+              2.4064477556212376,
+              1.416738413916949,
+              1.613616330295687,
+              1.544493397943735,
+              1.550453217257571,
+              2.149242169073693,
+              2.390888000053587,
+              1.4107275491637796,
+              1.6174712338863408,
+              1.548030728134843,
+              1.5586002700888069,
+              2.1468142975286266,
+              2.3851354431875857,
+              1.418104044788325,
+              1.6254989137195606,
+              1.5484885535471469,
+              1.563747029244341
+            ],
+            "slope": 0.3561468697134866,
+            "intercept": 1.6361888878488327,
+            "se_intercept": 0.09178870894393137,
+            "t_stat": 17.825600846486353,
+            "p_value": 6.954437026251981e-13,
+            "intercept_significant": true,
+            "r_squared": 0.5681984240817309,
+            "verdict_cv_only": "chain_ladder_valid",
+            "verdict_corrected": "factor_plus_constant",
+            "n_unique_x": 6
+          }
+        ]
+      }
+    },
+    "intercept_significance_table": [
+      {
+        "transition": "L0→L1",
+        "intercept": null,
+        "se_intercept": null,
+        "t_stat": null,
+        "p_value": null,
+        "intercept_significant_2se": null,
+        "cv": null,
+        "verdict_prior_experiment": "borderline",
+        "verdict_cv_only": "degenerate",
+        "verdict_corrected": "degenerate",
+        "reclassification": true
+      },
+      {
+        "transition": "L1→L2",
+        "intercept": 0.3672454680334792,
+        "se_intercept": 0.03251885370256953,
+        "t_stat": 11.293309148977189,
+        "p_value": 1.0458300891968975e-13,
+        "intercept_significant_2se": true,
+        "cv": 0.31095107741750583,
+        "verdict_prior_experiment": "borderline",
+        "verdict_cv_only": "borderline",
+        "verdict_corrected": "factor_plus_constant",
+        "reclassification": true
+      },
+      {
+        "transition": "L2→L3",
+        "intercept": 1.2497304945152725,
+        "se_intercept": 0.16760352702384335,
+        "t_stat": 7.456468946130742,
+        "p_value": 5.982640605139977e-09,
+        "intercept_significant_2se": true,
+        "cv": 0.38640783798743367,
+        "verdict_prior_experiment": "borderline",
+        "verdict_cv_only": "borderline",
+        "verdict_corrected": "factor_plus_constant",
+        "reclassification": true
+      },
+      {
+        "transition": "L3→L4",
+        "intercept": 1.5731026347104318,
+        "se_intercept": 0.13057132925674825,
+        "t_stat": 12.047841158277325,
+        "p_value": 1.509903313490213e-14,
+        "intercept_significant_2se": true,
+        "cv": 0.29389874104304503,
+        "verdict_prior_experiment": "chain_ladder_valid",
+        "verdict_cv_only": "chain_ladder_valid",
+        "verdict_corrected": "factor_plus_constant",
+        "reclassification": true
+      }
+    ],
+    "hypothesis_verdict": [
+      {
+        "criterion": "SC1_venter_proportionality",
+        "description": "CV<0.30 for >=1 transition in >=1 sector, AND intercept non-significant (Venter 1998 combined criterion)",
+        "result": {
+          "transitions_cv_below_030": [
+            "L3→L4"
+          ],
+          "chain_ladder_valid_corrected": [],
+          "reclassifications": [
+            [
+              "L0→L1",
+              "degenerate"
+            ],
+            [
+              "L1→L2",
+              "factor_plus_constant"
+            ],
+            [
+              "L2→L3",
+              "factor_plus_constant"
+            ],
+            [
+              "L3→L4",
+              "factor_plus_constant"
+            ]
+          ]
+        },
+        "threshold": "CV<0.30 AND |a|<2*SE(a)",
+        "verdict": "DISCONFIRMED",
+        "note": "L3→L4 incorrectly labeled chain_ladder_valid in prior experiment (CV=0.2939<0.30) but intercept=1.573 with p≈0 requires reclassification as factor_plus_constant per Venter (1998). After reclassification, 0 of 4 transitions qualify as chain_ladder_valid."
+      },
+      {
+        "criterion": "SC2_spearman_improvement",
+        "description": "SREDT Spearman correlation with ground truth >= flat baseline + 0.15",
+        "result": {
+          "n_valid_labels": 0,
+          "ground_truth_source": "median_split_proxy"
+        },
+        "threshold": "Spearman improvement >= 0.15",
+        "verdict": "INSUFFICIENT_DATA",
+        "note": "0 valid LLM judge labels (all rate_limited). Prior metrics used inadmissible median_split_proxy ground truth."
+      },
+      {
+        "criterion": "SC3_brier_improvement",
+        "description": "SREDT Brier score lower than flat embedding baseline",
+        "result": {
+          "n_valid_labels": 0
+        },
+        "threshold": "Brier_sredt < Brier_flat",
+        "verdict": "INSUFFICIENT_DATA",
+        "note": "No valid ground truth labels. Prior Brier metrics against synthetic proxy labels are invalid."
+      },
+      {
+        "criterion": "SC4_cohen_kappa",
+        "description": "Inter-annotator Cohen kappa >= 0.60 for 3 domain annotators",
+        "result": {
+          "annotation_status": "not_performed"
+        },
+        "threshold": "kappa >= 0.60",
+        "verdict": "NOT_TESTED",
+        "note": "Human annotation deferred to future work."
+      },
+      {
+        "criterion": "SC5_circularity_check",
+        "description": "L0-L4 Spearman rank correlation < 0.80 (SREDT not reducible to flat retrieval)",
+        "result": {
+          "l0_l4_rank_corr": null,
+          "reason": "L0 constant (all 20 articles, synthetic fallback) — Spearman undefined"
+        },
+        "threshold": "rank_corr < 0.80",
+        "verdict": "INSUFFICIENT_DATA",
+        "note": "L0 is identical for all 40 training scenarios (3.044 = log(21), synthetic). Cannot compute Spearman rank correlation."
+      }
+    ],
+    "overall_verdict": "DISCONFIRMED",
+    "figure_paths": [
+      "/ai-inventor/aii_data/runs/run_PoDi6I8fYcAb/3_invention_loop/iter_2/gen_art/gen_art_evaluation_1/figures/fig1_development_triangle_heatmap.png",
+      "/ai-inventor/aii_data/runs/run_PoDi6I8fYcAb/3_invention_loop/iter_2/gen_art/gen_art_evaluation_1/figures/fig2_venter_regression_scatterplots.png",
+      "/ai-inventor/aii_data/runs/run_PoDi6I8fYcAb/3_invention_loop/iter_2/gen_art/gen_art_evaluation_1/figures/fig3_test_score_comparison.png",
+      "/ai-inventor/aii_data/runs/run_PoDi6I8fYcAb/3_invention_loop/iter_2/gen_art/gen_art_evaluation_1/figures/fig4_article_count_distribution.png"
+    ],
+    "key_finding": "The prior SREDT experiment (iter_1) used a CV-only Venter criterion and incorrectly labeled L3→L4 as chain_ladder_valid (CV=0.2939<0.30), while the intercept was highly significant (a=1.573, t=12.048, p≈0), which under Venter (1998) requires reclassification as factor_plus_constant. After applying the combined Venter criterion (CV<0.30 AND intercept non-significant), 0 of 4 transitions qualify as chain_ladder_valid — SC1 is DISCONFIRMED. All other success criteria (SC2–SC5) are INSUFFICIENT_DATA or NOT_TESTED: (a) all 0 LLM judge evaluations were skipped due to rate limits; (b) L0 is constant (all 3.044 = log(21), synthetic 20-article fallback), making SC5 undefined. Data source: baseline_experiment_iter1. Data quality flag: SYNTHETIC_DATA.",
+    "limitations": [
+      "All GDELT article retrieval fell back to synthetic 20-article sets; real GDELT data not obtained. L0=3.044 constant for all scenarios, making L0→L1 regression degenerate and SC5 undefined.",
+      "All 20 test-set LLM judge evaluations were rate-limited (UNKNOWN labels). Evaluation metrics (AUROC, Brier, Spearman) computed against inadmissible median_split_proxy ground truth in prior experiment.",
+      "Keyword frequency = 1.0 for all scenarios (degenerate baseline). No discriminative power.",
+      "Training scenarios are repeated templates (6 companies x 6 risk types cycling). Effective regression n ≈ 6 unique (company, risk_type) pairs per sector, not 20 independent scenarios.",
+      "Overlapping 90-day training windows violate the actuarial non-overlapping accident-year analogy.",
+      "L3 centroids used Basel II-derived risk categories, not GARP 2025 L1 taxonomy as required by the corrected hypothesis.",
+      "L1/L2 centroids were free-form keyword concatenations, not canonical GICS label strings.",
+      "LLM-generated scenario diversity was not achieved; all scenarios used hardcoded templates, reducing cross-scenario variance critical for Venter regression stability.",
+      "Bootstrap CI interpretability limited by low effective sample size (≈6 unique data points per sector per transition due to template repetition). Bootstrap resamples scenarios, not unique company-risk pairs."
+    ],
+    "robustness_checks": {
+      "jackknife_l3_l4": {
+        "n": 40,
+        "fj_mean": 1.5985224552012354,
+        "fj_std": 0.008153126149617614,
+        "fj_min": 1.5806473564467345,
+        "fj_max": 1.6070398809859618,
+        "intercept_mean": 1.5728712509358949,
+        "intercept_std": 0.01539335487357583,
+        "intercept_min": 1.5363405652099045,
+        "intercept_max": 1.6084325810267606
+      },
+      "sector_swap_test": {
+        "fit_energy_pred_financials": {
+          "fit_slope": 0.2629519373105003,
+          "fit_intercept": 1.5157807272215067,
+          "transfer_r_squared": -3.3643064999927983,
+          "n_fit": 20,
+          "n_pred": 20
+        },
+        "fit_financials_pred_energy": {
+          "fit_slope": 0.3561468697134866,
+          "fit_intercept": 1.6361888878488327,
+          "transfer_r_squared": -1.4982119479117482,
+          "n_fit": 20,
+          "n_pred": 20
+        }
+      }
+    },
+    "transitions_full": [
+      {
+        "transition": "L0→L1",
+        "n": 40,
+        "f_j": 0.22297939265721978,
+        "cv": null,
+        "slope": null,
+        "intercept": null,
+        "se_intercept": null,
+        "t_stat": null,
+        "p_value": null,
+        "intercept_significant": null,
+        "r_squared": null,
+        "verdict_cv_only": "degenerate",
+        "verdict_corrected": "degenerate"
+      },
+      {
+        "transition": "L1→L2",
+        "n": 40,
+        "f_j": 1.1873002634311347,
+        "cv": 0.31095107741750583,
+        "slope": 0.6463310653111809,
+        "intercept": 0.3672454680334792,
+        "se_intercept": 0.03251885370256953,
+        "t_stat": 11.293309148977189,
+        "p_value": 1.0458300891968975e-13,
+        "intercept_significant": true,
+        "r_squared": 0.8533470749512244,
+        "verdict_cv_only": "borderline",
+        "verdict_corrected": "factor_plus_constant"
+      },
+      {
+        "transition": "L2→L3",
+        "n": 40,
+        "f_j": 1.5172336531647561,
+        "cv": 0.38640783798743367,
+        "slope": -0.033266793378284136,
+        "intercept": 1.2497304945152725,
+        "se_intercept": 0.16760352702384335,
+        "t_stat": 7.456468946130742,
+        "p_value": 5.982640605139977e-09,
+        "intercept_significant": true,
+        "r_squared": 0.0007231925461926296,
+        "verdict_cv_only": "borderline",
+        "verdict_corrected": "factor_plus_constant"
+      },
+      {
+        "transition": "L3→L4",
+        "n": 40,
+        "f_j": 1.598480854953191,
+        "cv": 0.29389874104304503,
+        "slope": 0.31212798463983926,
+        "intercept": 1.5731026347104318,
+        "se_intercept": 0.13057132925674825,
+        "t_stat": 12.047841158277325,
+        "p_value": 1.509903313490213e-14,
+        "intercept_significant": true,
+        "r_squared": 0.19096025485698395,
+        "verdict_cv_only": "chain_ladder_valid",
+        "verdict_corrected": "factor_plus_constant"
+      }
+    ]
+  },
+  "metrics_agg": {
+    "sc1_transitions_cv_below_030": 1.0,
+    "sc1_transitions_chain_ladder_valid_corrected": 0.0,
+    "sc1_reclassification_count": 4.0,
+    "sc1_verdict_disconfirmed": 1.0,
+    "sc2_verdict_insufficient_data": 1.0,
+    "sc3_verdict_insufficient_data": 1.0,
+    "sc4_verdict_not_tested": 1.0,
+    "sc5_verdict_insufficient_data": 1.0,
+    "n_valid_llm_labels": 0.0,
+    "n_train_scenarios": 40.0,
+    "n_test_scenarios": 20.0,
+    "l0_variance": 0.0,
+    "keyword_freq_variance": 0.0,
+    "l3l4_cv": 0.29389874104304503,
+    "l3l4_intercept": 1.5731026347104318,
+    "l3l4_t_stat": 12.047841158277325,
+    "l3l4_p_value": 1.509903313490213e-14,
+    "l3l4_boot_intercept_lower": 1.3002561196411149,
+    "l3l4_boot_intercept_upper": 1.7409190182716099,
+    "l3l4_boot_p_intercept": 0.888,
+    "bootstrap_B": 1000.0,
+    "unique_company_risk_pairs": 12.0,
+    "repetition_ratio": 3.33,
+    "overall_disconfirmed": 1.0
+  },
+  "datasets": [
+    {
+      "dataset": "SREDT_GDELT_Risk_Scenarios",
+      "examples": [
+        {
+          "input": "Scenario: Shell faces strategic risk challenges in the energy sector during 2024-01-01 to 2024-03-31, driven by macroeconomic headwinds and regulatory changes.\nCompany: Shell | Sector: energy | Risk: Strategic Risk\nWindow: 2024-01-01 to 2024-03-31",
+          "output": "LLM Judge Label: UNKNOWN\nJustification: llm_skipped_rate_limited",
+          "predict_sredt": "1.710809",
+          "predict_flat_cosine": "0.640144",
+          "predict_keyword": "1.0",
+          "metadata_scenario_id": "scen_020",
+          "metadata_company": "Shell",
+          "metadata_sector": "energy",
+          "metadata_risk_type": "Strategic Risk",
+          "metadata_start_date": "2024-01-01",
+          "metadata_end_date": "2024-03-31",
+          "metadata_n_articles": "20",
+          "metadata_llm_judge_label": "-1",
+          "metadata_projected_l3": "1.070259",
+          "eval_sredt_minus_flat": 1.070665
+        },
+        {
+          "input": "Scenario: BP faces credit risk challenges in the energy sector during 2024-01-19 to 2024-04-18, driven by macroeconomic headwinds and regulatory changes.\nCompany: BP | Sector: energy | Risk: Credit Risk\nWindow: 2024-01-19 to 2024-04-18",
+          "output": "LLM Judge Label: UNKNOWN\nJustification: llm_skipped_rate_limited",
+          "predict_sredt": "1.961345",
+          "predict_flat_cosine": "0.620432",
+          "predict_keyword": "1.0",
+          "metadata_scenario_id": "scen_021",
+          "metadata_company": "BP",
+          "metadata_sector": "energy",
+          "metadata_risk_type": "Credit Risk",
+          "metadata_start_date": "2024-01-19",
+          "metadata_end_date": "2024-04-18",
+          "metadata_n_articles": "20",
+          "metadata_llm_judge_label": "-1",
+          "metadata_projected_l3": "1.226991",
+          "eval_sredt_minus_flat": 1.340913
+        },
+        {
+          "input": "Scenario: TotalEnergies faces market risk challenges in the energy sector during 2024-02-06 to 2024-05-06, driven by macroeconomic headwinds and regulatory changes.\nCompany: TotalEnergies | Sector: energy | Risk: Market Risk\nWindow: 2024-02-06 to 2024-05-06",
+          "output": "LLM Judge Label: UNKNOWN\nJustification: llm_skipped_rate_limited",
+          "predict_sredt": "2.081131",
+          "predict_flat_cosine": "0.592722",
+          "predict_keyword": "1.0",
+          "metadata_scenario_id": "scen_022",
+          "metadata_company": "TotalEnergies",
+          "metadata_sector": "energy",
+          "metadata_risk_type": "Market Risk",
+          "metadata_start_date": "2024-02-06",
+          "metadata_end_date": "2024-05-06",
+          "metadata_n_articles": "20",
+          "metadata_llm_judge_label": "-1",
+          "metadata_projected_l3": "1.301927",
+          "eval_sredt_minus_flat": 1.488409
+        }
+      ]
+    }
+  ]
+}

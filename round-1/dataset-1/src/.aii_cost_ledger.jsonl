@@ -1,0 +1,4 @@
+{"ts": 1781457630.3218992, "tool": "aii_web_tools__search", "cost_usd": 0.001, "query": "ashraq financial-news-articles dataset Reuters CNBC", "count": 5}
+{"ts": 1781457630.449736, "tool": "aii_web_tools__search", "cost_usd": 0.001, "query": "TheFinAI gdelt_news_2024_2025 dataset", "count": 5}
+{"ts": 1781457630.495602, "tool": "aii_web_tools__search", "cost_usd": 0.001, "query": "zeroshot twitter-financial-news-sentiment dataset paper", "count": 5}
+{"ts": 1781457630.6250677, "tool": "aii_web_tools__search", "cost_usd": 0.001, "query": "NOSIBLE financial-sentiment dataset", "count": 5}

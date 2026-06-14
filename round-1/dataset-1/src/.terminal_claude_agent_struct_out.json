@@ -1,0 +1,15 @@
+{
+  "title": "Twitter Financial News Sentiment Dataset for SREDT Research",
+  "layman_summary": "This dataset collects 9,543 financial Twitter posts labeled as bearish, neutral, or bullish sentiment, serving as a supplementary resource alongside LLM-generated corporate risk scenarios and GDELT news articles for the SREDT research experiment.",
+  "summary": "This artifact provides the zeroshot/twitter-financial-news-sentiment dataset (9,543 examples) standardized to the exp_sel_data_out schema for use as a supplementary dataset in the SREDT (Stochastic Risk Event Density Topology) experiment. Each example is a financial tweet labeled with sentiment (bearish=0, neutral=1, bullish=2), converted to human-readable labels. The dataset is complete (all 9,543 training rows included), small (3.5MB), and provides ground-truth sentiment labels that complement the primary SREDT dataset of LLM-generated corporate risk scenarios paired with GDELT news articles. The twitter sentiment labels serve as a validation signal for financial text understanding models used in SREDT abstraction-level assignment. Fields per example: input (tweet text), output (bearish/neutral/bullish label string), metadata_row_index (original row index), metadata_task_type (classification), metadata_n_classes (3), metadata_label_int (original integer label), metadata_label_names (label mapping string). The primary SREDT dataset (data_out.json with 120 risk scenarios and GDELT articles) is generated separately by build_dataset.py.",
+  "out_expected_files": {
+    "script": "data.py",
+    "datasets": [
+      {
+        "full": ["full_data_out.json"],
+        "mini": "mini_data_out.json",
+        "preview": "preview_data_out.json"
+      }
+    ]
+  }
+}

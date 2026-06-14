@@ -1,0 +1,174 @@
+{
+  "metadata": {
+    "method_name": "SREDT (Sector-Risk Editorial Development Triangle)",
+    "iteration": 2,
+    "data_source": "gdelt_csv_with_synthetic_fallback",
+    "n_train_scenarios": 30,
+    "n_test_scenarios": 10,
+    "total_cost_usd": 0.001,
+    "venter_diagnostics": [
+      {
+        "transition": "L0→L1",
+        "f_j": 0.1960352472196693,
+        "cv": 0.3528768808856122,
+        "intercept": -0.02385303923424642,
+        "se_intercept": 0.12032394516102685,
+        "intercept_t_stat": 0.19824016908792502,
+        "intercept_p": 0.8442894750694703,
+        "intercept_significant": false,
+        "slope": 0.20155905400203547,
+        "slope_p": 1.9002689873606523e-08,
+        "r_squared": 0.682321048658074,
+        "verdict": "borderline",
+        "n_observations": 30
+      },
+      {
+        "transition": "L1→L2",
+        "f_j": 0.9100316899610632,
+        "cv": 0.2738085174159724,
+        "intercept": 0.007138339756451173,
+        "se_intercept": 0.06967620056368004,
+        "intercept_t_stat": 0.10245018670076148,
+        "intercept_p": 0.9191295600334375,
+        "intercept_significant": false,
+        "slope": 0.9015991616777045,
+        "slope_p": 1.0993808298607176e-12,
+        "r_squared": 0.840682615366342,
+        "verdict": "chain_ladder",
+        "n_observations": 30
+      },
+      {
+        "transition": "L2→L3",
+        "f_j": 0.7711048992375811,
+        "cv": 0.7145176058673608,
+        "intercept": 0.19960140877265437,
+        "se_intercept": 0.10300658155865486,
+        "intercept_t_stat": 1.9377539352381858,
+        "intercept_p": 0.06502632639321138,
+        "intercept_significant": false,
+        "slope": 0.5142022407402972,
+        "slope_p": 0.0002071191612478667,
+        "r_squared": 0.4571683840153969,
+        "verdict": "bf_fallback",
+        "n_observations": 25
+      }
+    ],
+    "article_count_distribution": {
+      "day45_mean": 97.367,
+      "day45_median": 118.0,
+      "day90_mean": 165.3,
+      "day90_median": 215.5,
+      "day45_over_day90_ratio_mean": 0.627,
+      "n_scenarios": 30,
+      "n_zero_day45": 1,
+      "n_zero_day90": 0
+    },
+    "evaluation_metrics": {
+      "ground_truth_valid": true,
+      "n_valid_labels": 10,
+      "n_materialized": 1,
+      "sredt_auroc": 0.0556,
+      "baseline_cosine_auroc": 0.4444,
+      "baseline_kw_auroc": 0.2778,
+      "sredt_spearman": -0.4656,
+      "baseline_cosine_spearman": -0.058,
+      "sredt_brier": 0.4175,
+      "baseline_cosine_brier": 0.3311,
+      "l0_l4_rank_corr": 0.8632258720256917
+    },
+    "summary": {
+      "main_finding": "Venter dual-criterion diagnostics on 4 transitions: L0→L1=borderline; L1→L2=chain_ladder; L2→L3=bf_fallback; L3→L4=bf_fallback. Intercept-significant transitions: 0/4. Data source: gdelt_csv_with_synt...",
+      "verdicts_by_transition": {
+        "L0→L1": "borderline",
+        "L1→L2": "chain_ladder",
+        "L2→L3": "bf_fallback",
+        "L3→L4": "bf_fallback"
+      },
+      "data_quality_note": "Scenarios: 30 train (3 non-overlapping 90-day windows), 10 test. Data source: gdelt_csv_with_synthetic_fallback.",
+      "methodological_fixes_iter2": [
+        "Real GDELT CSV data with day-45 temporal cutoffs",
+        "GARP 2025 six-category L3 centroids with descriptive expansion",
+        "Canonical GICS label+code strings for L1/L2"
+      ]
+    }
+  },
+  "datasets": [
+    {
+      "dataset": "sredt_scenarios_v2",
+      "examples": [
+        {
+          "input": "Company: Shell | Sector: energy | Risk Type: Operational Risk | Window: 2024-01-01 to 2024-03-31 | Scenario: The implementation of the EU's Gas Directive in February 2024 may lead to operational disru...",
+          "output": "NOT_MATERIALIZED",
+          "predict_sredt": "0.835207",
+          "predict_baseline_cosine": "0.199845",
+          "predict_baseline_keyword": "0.0",
+          "metadata_scenario_id": "scen_015",
+          "metadata_company": "Shell",
+          "metadata_sector": "energy",
+          "metadata_risk_type": "Operational Risk",
+          "metadata_split": "test",
+          "metadata_start_date": "2024-01-01",
+          "metadata_end_date": "2024-03-31",
+          "metadata_l0_mass": "5.370638",
+          "metadata_l1_mass": "1.179291",
+          "metadata_l2_mass": "0.979373",
+          "metadata_projected_l3": "0.654049",
+          "metadata_projected_l4": "0.835207",
+          "metadata_projection_method_l2_l3": "bf_fallback",
+          "metadata_projection_method_l3_l4": "bf_fallback",
+          "metadata_llm_judge_label": "0",
+          "metadata_flat_cosine": "0.199845",
+          "metadata_keyword_freq": "0.0"
+        },
+        {
+          "input": "Company: BP | Sector: energy | Risk Type: Reputational Risk | Window: 2024-01-15 to 2024-03-31 | Scenario: BP's decision to invest in new oil exploration projects in the Arctic region may spark public...",
+          "output": "NOT_MATERIALIZED",
+          "predict_sredt": "1.165171",
+          "predict_baseline_cosine": "0.077194",
+          "predict_baseline_keyword": "0.0",
+          "metadata_scenario_id": "scen_016",
+          "metadata_company": "BP",
+          "metadata_sector": "energy",
+          "metadata_risk_type": "Reputational Risk",
+          "metadata_split": "test",
+          "metadata_start_date": "2024-01-15",
+          "metadata_end_date": "2024-03-31",
+          "metadata_l0_mass": "5.70711",
+          "metadata_l1_mass": "1.568117",
+          "metadata_l2_mass": "1.309337",
+          "metadata_projected_l3": "0.984013",
+          "metadata_projected_l4": "1.165171",
+          "metadata_projection_method_l2_l3": "bf_fallback",
+          "metadata_projection_method_l3_l4": "bf_fallback",
+          "metadata_llm_judge_label": "0",
+          "metadata_flat_cosine": "0.077194",
+          "metadata_keyword_freq": "0.0"
+        },
+        {
+          "input": "Company: TotalEnergies | Sector: energy | Risk Type: Financial Risk | Window: 2024-02-01 to 2024-03-31 | Scenario: The impending increase in EU carbon prices in March 2024 may significantly impact Tot...",
+          "output": "NOT_MATERIALIZED",
+          "predict_sredt": "0.181158",
+          "predict_baseline_cosine": "0.291627",
+          "predict_baseline_keyword": "0.080645",
+          "metadata_scenario_id": "scen_017",
+          "metadata_company": "TotalEnergies",
+          "metadata_sector": "energy",
+          "metadata_risk_type": "Financial Risk",
+          "metadata_split": "test",
+          "metadata_start_date": "2024-02-01",
+          "metadata_end_date": "2024-03-31",
+          "metadata_l0_mass": "0.693147",
+          "metadata_l1_mass": "0.183384",
+          "metadata_l2_mass": "0.154895",
+          "metadata_projected_l3": "0.0",
+          "metadata_projected_l4": "0.181158",
+          "metadata_projection_method_l2_l3": "bf_fallback",
+          "metadata_projection_method_l3_l4": "bf_fallback",
+          "metadata_llm_judge_label": "0",
+          "metadata_flat_cosine": "0.291627",
+          "metadata_keyword_freq": "0.080645"
+        }
+      ]
+    }
+  ]
+}
