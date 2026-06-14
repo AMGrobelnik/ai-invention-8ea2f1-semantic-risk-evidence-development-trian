@@ -1,0 +1,16 @@
+{
+  "kind": "code_demo",
+  "id": "art_FA9wEsVVvF8I",
+  "name": "gen_art_experiment_1",
+  "type": "code",
+  "iteration": 2,
+  "title": "SREDT Pipeline: Real GDELT CSV, GARP 2025 Taxonomy, Venter Dual Criterion",
+  "summary": "Implements the corrected SREDT (Sector-Risk Editorial Development Triangle) pipeline with five mandatory methodological fixes over the prior synthetic-data iteration. (1) DATA SOURCE: Real GDELT V1 event CSV bulk downloads (data.gdeltproject.org/events/) for 2023\u20132024, with positional column parsing (58 columns: SQLDATE=col1, Actor1Name=col6, Actor2Name=col16, SOURCEURL=col57) and URL-slug matching to retrieve company-relevant articles. 37/40 scenarios used real GDELT CSV articles; 3 scenarios (ING Group Q1 2023, Allianz Q1 2023, ING Group Q1 2024) used LLM-generated synthetic fallback. Article count distribution: day45_mean=97.4, day90_mean=165.3, day45/day90 ratio=0.627, zero_day90=0. (2) GARP 2025 L3 CENTROIDS: Six categories (Operational, Business, Strategic, Reputational, Financial, ESG Risk) each encoded as descriptive embedding strings with sub-topic expansions, embedded via all-MiniLM-L6-v2. (3) GICS L1/L2 CENTROIDS: Canonical sub-industry label+code strings for Energy (Oil Gas Consumable Fuels 101020, Energy Equipment Services 101010) and Financials (Diversified Banks 40101010, Regional Banks 40101015, Life Health Insurance 40301020, etc.), plus L2 industry groups (Energy 1010, Banks 4010, Financial Services 4020, Insurance 4030). (4) VENTER DUAL CRITERION (primary fix): Intercept significance |a|\u22652\u00b7SE(a) is the PRIMARY criterion overriding CV thresholds. With real GDELT data: L0\u2192L1=borderline (CV=0.353, t=0.20), L1\u2192L2=chain_ladder (CV=0.274, t=0.10), L2\u2192L3=bf_fallback (CV=0.715, t=1.94), L3\u2192L4=bf_fallback (CV=0.661, t=0.88). No transitions show significant intercepts with real data \u2014 correctly applying bf_fallback rather than the false chain_ladder_valid from iter-1. (5) LLM-AS-JUDGE GROUND TRUTH: 10/10 valid judgments obtained via meta-llama/llama-3.3-70b-instruct (gemini-flash-1.5 was rate-limited); 1/10 scenarios materialized (ING Group Q1 2024). EVALUATION: SREDT AUROC=0.056, baseline cosine AUROC=0.444, L0\u2013L4 rank correlation=0.863 (high circularity). SREDT does not outperform flat cosine baseline; the bf_fallback projection assigns similar scores to all test scenarios based on prior mean, failing to discriminate. Total OpenRouter cost: $0.0010. Schema validates against exp_gen_sol_out. Output: 40 examples (30 train, 10 test) with predict_sredt, predict_baseline_cosine, predict_baseline_keyword, full Venter diagnostics, and article count distributions.",
+  "original_path": "/ai-inventor/aii_data/runs/run_PoDi6I8fYcAb/3_invention_loop/iter_2/gen_art/gen_art_experiment_1",
+  "demo_path": "/ai-inventor/aii_data/runs/run_PoDi6I8fYcAb/4_gen_paper_repo/_3_gen_art_demo/iter_2/art_FA9wEsVVvF8I",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/ai-inventor/aii_data/runs/run_PoDi6I8fYcAb/4_gen_paper_repo/_3_gen_art_demo/iter_2/art_FA9wEsVVvF8I/method_code_demo.ipynb"
+}

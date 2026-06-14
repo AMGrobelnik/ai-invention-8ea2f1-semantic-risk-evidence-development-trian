@@ -1,0 +1,16 @@
+{
+  "kind": "code_demo",
+  "id": "art_ljE2I1O7cl1H",
+  "name": "gen_art_dataset_1",
+  "type": "code",
+  "iteration": 1,
+  "title": "Twitter Financial News Sentiment Dataset for SREDT Research",
+  "summary": "This artifact provides the zeroshot/twitter-financial-news-sentiment dataset (9,543 examples) standardized to the exp_sel_data_out schema for use as a supplementary dataset in the SREDT (Stochastic Risk Event Density Topology) experiment. Each example is a financial tweet labeled with sentiment (bearish=0, neutral=1, bullish=2), converted to human-readable labels. The dataset is complete (all 9,543 training rows included), small (3.5MB), and provides ground-truth sentiment labels that complement the primary SREDT dataset of LLM-generated corporate risk scenarios paired with GDELT news articles. The twitter sentiment labels serve as a validation signal for financial text understanding models used in SREDT abstraction-level assignment. Fields per example: input (tweet text), output (bearish/neutral/bullish label string), metadata_row_index (original row index), metadata_task_type (classification), metadata_n_classes (3), metadata_label_int (original integer label), metadata_label_names (label mapping string). The primary SREDT dataset (data_out.json with 120 risk scenarios and GDELT articles) is generated separately by build_dataset.py.",
+  "original_path": "/ai-inventor/aii_data/runs/run_PoDi6I8fYcAb/3_invention_loop/iter_1/gen_art/gen_art_dataset_1",
+  "demo_path": "/ai-inventor/aii_data/runs/run_PoDi6I8fYcAb/4_gen_paper_repo/_3_gen_art_demo/iter_1/art_ljE2I1O7cl1H",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/ai-inventor/aii_data/runs/run_PoDi6I8fYcAb/4_gen_paper_repo/_3_gen_art_demo/iter_1/art_ljE2I1O7cl1H/data_code_demo.ipynb"
+}

@@ -1,0 +1,16 @@
+{
+  "kind": "code_demo",
+  "id": "art_nHgFoHvUueV2",
+  "name": "gen_art_experiment_1",
+  "type": "code",
+  "iteration": 1,
+  "title": "SREDT Chain-Ladder Semantic Development Triangle for Risk Scenario Validation",
+  "summary": "The SREDT (Semantic Risk Event Development Triangle) pipeline was fully implemented and executed as follows:\n\n**Method**: 60 European corporate risk scenarios (40 train, 20 test) across energy and financial sectors were generated using hardcoded templates (LLM generation fell back to templates due to free-tier rate limits). For each scenario, GDELT news articles were retrieved with three-tier fallback: gdeltdoc library \u2192 direct REST API \u2192 locally-generated synthetic article titles. A 60\u00d75 relevance-density mass matrix was constructed where each cell C(i,j) = mean_cosine_sim_above_threshold \u00d7 log(1 + count_above_threshold), with:\n- L0: retrieval volume (log article count)\n- L1: sector-level similarity (GICS L1 centroid)\n- L2: subsector similarity (GICS L2 centroid)\n- L3: risk-category similarity (GARP centroid for scenario's risk type) \u2014 observed in train, latent in test\n- L4: scenario-specific similarity (scenario text embedding) \u2014 observed in train, latent in test\n\n**Venter Actuarial Diagnostics**: Run on 40 training rows per level transition (L0\u2192L1, L1\u2192L2, L2\u2192L3, L3\u2192L4). Coefficient of variation (CV) of individual development ratios determines whether chain-ladder (CV<0.3) or Bornhuetter-Ferguson fallback (CV>0.5) is used for each transition.\n\n**Projection**: Test set L3/L4 values projected using per-transition CL or BF method with sector-specific priors from training set.\n\n**Ground Truth**: 20 test scenarios evaluated by LLM-as-judge (free Llama or Gemini Flash via OpenRouter) \u2014 did the scenario materialize given the retrieved articles?\n\n**Baselines**: (1) Flat cosine similarity: mean cosine sim of all articles vs. scenario text (no hierarchy, no threshold); (2) Keyword frequency: fraction of articles mentioning risk-type keywords.\n\n**Metrics**: AUROC, Brier score, Spearman correlation for SREDT vs. both baselines; L0\u2013L4 Spearman rank correlation as circularity check (>0.95 \u2192 SREDT collapses to retrieval volume).\n\n**Verdict stored in summary.verdict**: one of 'confirmed' (Spearman improvement >0.15, no circularity), 'partial', 'disconfirmed_proportionality' (all CV>0.5), or 'disconfirmed_circularity' (L0\u2013L4 rank r>0.95).\n\nAll 60 scenarios are encoded as exp_gen_sol_out examples with input (scenario text), output (LLM judge verdict + justification for test; SREDT levels for train), and predict_sredt / predict_flat_cosine / predict_keyword fields. Full experimental results including venter_diagnostics, projection_method_used, metrics, and summary are stored in metadata.full_results.",
+  "original_path": "/ai-inventor/aii_data/runs/run_PoDi6I8fYcAb/3_invention_loop/iter_1/gen_art/gen_art_experiment_1",
+  "demo_path": "/ai-inventor/aii_data/runs/run_PoDi6I8fYcAb/4_gen_paper_repo/_3_gen_art_demo/iter_1/art_nHgFoHvUueV2",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/ai-inventor/aii_data/runs/run_PoDi6I8fYcAb/4_gen_paper_repo/_3_gen_art_demo/iter_1/art_nHgFoHvUueV2/method_code_demo.ipynb"
+}

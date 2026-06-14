@@ -1,0 +1,123 @@
+{
+  "metadata": {
+    "description": "Twitter financial news sentiment dataset for SREDT experiment (supplementary)",
+    "datasets_included": [
+      "zeroshot/twitter-financial-news-sentiment"
+    ]
+  },
+  "datasets": [
+    {
+      "dataset": "zeroshot/twitter-financial-news-sentiment",
+      "examples": [
+        {
+          "input": "$BYND - JPMorgan reels in expectations on Beyond Meat https://t.co/bd0xbFGjkT",
+          "output": "bearish",
+          "metadata_row_index": 0,
+          "metadata_task_type": "classification",
+          "metadata_n_classes": 3,
+          "metadata_label_int": 0,
+          "metadata_label_names": "bearish,neutral,bullish"
+        },
+        {
+          "input": "$CCL $RCL - Nomura points to bookings weakness at Carnival and Royal Caribbean https://t.co/yGjpT2ReD3",
+          "output": "bearish",
+          "metadata_row_index": 1,
+          "metadata_task_type": "classification",
+          "metadata_n_classes": 3,
+          "metadata_label_int": 0,
+          "metadata_label_names": "bearish,neutral,bullish"
+        },
+        {
+          "input": "$CX - Cemex cut at Credit Suisse, J.P. Morgan on weak building outlook https://t.co/KN1g4AWFIb",
+          "output": "bearish",
+          "metadata_row_index": 2,
+          "metadata_task_type": "classification",
+          "metadata_n_classes": 3,
+          "metadata_label_int": 0,
+          "metadata_label_names": "bearish,neutral,bullish"
+        },
+        {
+          "input": "$ESS: BTIG Research cuts to Neutral https://t.co/MCyfTsXc2N",
+          "output": "bearish",
+          "metadata_row_index": 3,
+          "metadata_task_type": "classification",
+          "metadata_n_classes": 3,
+          "metadata_label_int": 0,
+          "metadata_label_names": "bearish,neutral,bullish"
+        },
+        {
+          "input": "$ALTG: Dougherty & Company starts at Buy",
+          "output": "neutral",
+          "metadata_row_index": 126,
+          "metadata_task_type": "classification",
+          "metadata_n_classes": 3,
+          "metadata_label_int": 1,
+          "metadata_label_names": "bearish,neutral,bullish"
+        },
+        {
+          "input": "$AMD - AMD's Navi shows strong adoption - BofA https://t.co/WnCksfl1gX",
+          "output": "neutral",
+          "metadata_row_index": 127,
+          "metadata_task_type": "classification",
+          "metadata_n_classes": 3,
+          "metadata_label_int": 1,
+          "metadata_label_names": "bearish,neutral,bullish"
+        },
+        {
+          "input": "$ANCUF: BMO Capital Markets ups to Outperform",
+          "output": "neutral",
+          "metadata_row_index": 128,
+          "metadata_task_type": "classification",
+          "metadata_n_classes": 3,
+          "metadata_label_int": 1,
+          "metadata_label_names": "bearish,neutral,bullish"
+        },
+        {
+          "input": "$BHE: Lake Street starts at Buy",
+          "output": "neutral",
+          "metadata_row_index": 129,
+          "metadata_task_type": "classification",
+          "metadata_n_classes": 3,
+          "metadata_label_int": 1,
+          "metadata_label_names": "bearish,neutral,bullish"
+        },
+        {
+          "input": "$LB - MKM Partners puts a number on Victoria's Secret https://t.co/VSzHLqLBgE",
+          "output": "bullish",
+          "metadata_row_index": 358,
+          "metadata_task_type": "classification",
+          "metadata_n_classes": 3,
+          "metadata_label_int": 2,
+          "metadata_label_names": "bearish,neutral,bullish"
+        },
+        {
+          "input": "$WING - Baird returns to Wingstop bull camp https://t.co/KfPaweOVgo",
+          "output": "bullish",
+          "metadata_row_index": 359,
+          "metadata_task_type": "classification",
+          "metadata_n_classes": 3,
+          "metadata_label_int": 2,
+          "metadata_label_names": "bearish,neutral,bullish"
+        },
+        {
+          "input": "Analysts React To FCC Decision On Intelsat C-Band Spectrum Auction",
+          "output": "bullish",
+          "metadata_row_index": 360,
+          "metadata_task_type": "classification",
+          "metadata_n_classes": 3,
+          "metadata_label_int": 2,
+          "metadata_label_names": "bearish,neutral,bullish"
+        },
+        {
+          "input": "Arex Capital ramps up pressure on Zagg",
+          "output": "bullish",
+          "metadata_row_index": 361,
+          "metadata_task_type": "classification",
+          "metadata_n_classes": 3,
+          "metadata_label_int": 2,
+          "metadata_label_names": "bearish,neutral,bullish"
+        }
+      ]
+    }
+  ]
+}

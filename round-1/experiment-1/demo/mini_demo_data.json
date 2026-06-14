@@ -1,0 +1,249 @@
+{
+  "metadata": {
+    "method_name": "SREDT",
+    "description": "Semantic Risk Event Development Triangle \u2014 actuarial chain-ladder applied to semantic relevance mass across L0 (retrieval volume) through L4 (scenario-specific) for LLM risk scenario validation using GDELT news.",
+    "parameters": {
+      "sim_threshold": 0.15,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "n_train": 40,
+      "n_test": 20
+    },
+    "full_results": {
+      "venter_diagnostics": {
+        "level_transitions": [
+          {
+            "j": 0,
+            "j_label": "L0\u2192L1",
+            "f_j": 0.223,
+            "cv": 0.4632,
+            "slope": 0.0,
+            "intercept": 0.0,
+            "intercept_pvalue": 0.0,
+            "r_squared": 0.0,
+            "verdict": "borderline"
+          },
+          {
+            "j": 1,
+            "j_label": "L1\u2192L2",
+            "f_j": 1.1873,
+            "cv": 0.311,
+            "slope": 0.6463,
+            "intercept": 0.367245,
+            "intercept_pvalue": 0.0,
+            "r_squared": 0.8533,
+            "verdict": "borderline"
+          },
+          {
+            "j": 2,
+            "j_label": "L2\u2192L3",
+            "f_j": 1.5172,
+            "cv": 0.3864,
+            "slope": -0.0333,
+            "intercept": 1.24973,
+            "intercept_pvalue": 0.0,
+            "r_squared": 0.0007,
+            "verdict": "borderline"
+          },
+          {
+            "j": 3,
+            "j_label": "L3\u2192L4",
+            "f_j": 1.5985,
+            "cv": 0.2939,
+            "slope": 0.3121,
+            "intercept": 1.573103,
+            "intercept_pvalue": 0.0,
+            "r_squared": 0.191,
+            "verdict": "chain_ladder_valid"
+          }
+        ]
+      },
+      "projection_method_used": {
+        "l2_to_l3": "borderline",
+        "l3_to_l4": "chain_ladder_valid"
+      },
+      "test_scenario_scores": [
+        {
+          "scenario_id": "scen_020",
+          "company": "Shell",
+          "sector": "energy",
+          "risk_type": "Strategic Risk",
+          "start_date": "2024-01-01",
+          "end_date": "2024-03-31",
+          "text": "Shell faces strategic risk challenges in the energy sector during 2024-01-01 to 2024-03-31, driven by macroeconomic headwinds and regulatory changes.",
+          "projected_l4": 1.7108089785387361,
+          "projected_l3": 1.0702589793798787,
+          "flat_sim": 0.640143871307373,
+          "keyword_freq": 1.0,
+          "n_articles": 20,
+          "llm_judge_label": -1,
+          "llm_justification": "llm_skipped_rate_limited"
+        },
+        {
+          "scenario_id": "scen_021",
+          "company": "BP",
+          "sector": "energy",
+          "risk_type": "Credit Risk",
+          "start_date": "2024-01-19",
+          "end_date": "2024-04-18",
+          "text": "BP faces credit risk challenges in the energy sector during 2024-01-19 to 2024-04-18, driven by macroeconomic headwinds and regulatory changes.",
+          "projected_l4": 1.9613454124073044,
+          "projected_l3": 1.2269911869923706,
+          "flat_sim": 0.6204319596290588,
+          "keyword_freq": 1.0,
+          "n_articles": 20,
+          "llm_judge_label": -1,
+          "llm_justification": "llm_skipped_rate_limited"
+        },
+        {
+          "scenario_id": "scen_050",
+          "company": "BNP Paribas",
+          "sector": "financials",
+          "risk_type": "Strategic Risk",
+          "start_date": "2024-01-01",
+          "end_date": "2024-03-31",
+          "text": "BNP Paribas faces strategic risk challenges in the financials sector during 2024-01-01 to 2024-03-31, driven by macroeconomic headwinds and regulatory changes.",
+          "projected_l4": 2.0302258800765087,
+          "projected_l3": 1.2700818768073248,
+          "flat_sim": 0.730979859828949,
+          "keyword_freq": 1.0,
+          "n_articles": 20,
+          "llm_judge_label": -1,
+          "llm_justification": "llm_skipped_rate_limited"
+        }
+      ],
+      "train_scenario_analysis": [
+        {
+          "scenario_id": "scen_000",
+          "company": "Shell",
+          "sector": "energy",
+          "risk_type": "Strategic Risk",
+          "start_date": "2023-01-01",
+          "end_date": "2023-04-01",
+          "text": "Shell faces strategic risk challenges in the energy sector during 2023-01-01 to 2023-04-01, driven by macroeconomic headwinds and regulatory changes.",
+          "l0": 3.044522437723423,
+          "l1": 0.2621351837883607,
+          "l2": 0.5780093044958446,
+          "l3": 1.4351627216577179,
+          "l4": 1.9274139422604313,
+          "flat_sim": 0.6330759525299072,
+          "keyword_freq": 1.0,
+          "n_articles": 20
+        },
+        {
+          "scenario_id": "scen_001",
+          "company": "BP",
+          "sector": "energy",
+          "risk_type": "Credit Risk",
+          "start_date": "2023-01-19",
+          "end_date": "2023-04-19",
+          "text": "BP faces credit risk challenges in the energy sector during 2023-01-19 to 2023-04-19, driven by macroeconomic headwinds and regulatory changes.",
+          "l0": 3.044522437723423,
+          "l1": 0.3761507990796809,
+          "l2": 0.7331698190280325,
+          "l3": 1.3071467108578858,
+          "l4": 1.8779035711564653,
+          "flat_sim": 0.6168138384819031,
+          "keyword_freq": 1.0,
+          "n_articles": 20
+        },
+        {
+          "scenario_id": "scen_030",
+          "company": "BNP Paribas",
+          "sector": "financials",
+          "risk_type": "Strategic Risk",
+          "start_date": "2023-01-01",
+          "end_date": "2023-04-01",
+          "text": "BNP Paribas faces strategic risk challenges in the financials sector during 2023-01-01 to 2023-04-01, driven by macroeconomic headwinds and regulatory changes.",
+          "l0": 3.044522437723423,
+          "l1": 0.9565125035519247,
+          "l2": 1.0577419796076386,
+          "l3": 1.4427821865388477,
+          "l4": 2.2153291090862313,
+          "flat_sim": 0.7276442050933838,
+          "keyword_freq": 1.0,
+          "n_articles": 20
+        }
+      ],
+      "metrics": {
+        "n_valid_labels": 0,
+        "ground_truth_source": "median_split_proxy",
+        "sredt_auroc": 1.0,
+        "flat_auroc": 0.46464646464646464,
+        "keyword_auroc": 0.5,
+        "sredt_brier": 0.07756322764344237,
+        "flat_brier": 0.2618407882067696,
+        "keyword_brier": 0.55,
+        "sredt_spearman": 0.8653700685382736,
+        "flat_spearman": -0.061003481655200247,
+        "keyword_spearman": NaN,
+        "l0_l4_rank_corr": NaN,
+        "spearman_improvement_over_flat": 0.9263735501934738
+      },
+      "summary": {
+        "proportionality_holds_count": 1,
+        "bf_fallback_count": 0,
+        "main_finding": "Partial: 1 valid transitions, Spearman improvement = 0.9263735501934738, L0-L4 rank r = nan. SREDT shows some signal but does not meet all success criteria.",
+        "verdict": "partial",
+        "total_llm_cost_usd": 0.0,
+        "n_train_scenarios": 40,
+        "n_test_scenarios": 20,
+        "embedding_type": "sentence_transformers"
+      }
+    }
+  },
+  "datasets": [
+    {
+      "dataset": "SREDT_GDELT_Risk_Scenarios",
+      "examples": [
+        {
+          "input": "Scenario: Shell faces strategic risk challenges in the energy sector during 2024-01-01 to 2024-03-31, driven by macroeconomic headwinds and regulatory changes.\nCompany: Shell | Sector: energy | Risk: Strategic Risk\nWindow: 2024-01-01 to 2024-03-31",
+          "output": "LLM Judge Label: UNKNOWN\nJustification: llm_skipped_rate_limited",
+          "predict_sredt": "1.710809",
+          "predict_flat_cosine": "0.640144",
+          "predict_keyword": "1.0",
+          "metadata_scenario_id": "scen_020",
+          "metadata_company": "Shell",
+          "metadata_sector": "energy",
+          "metadata_risk_type": "Strategic Risk",
+          "metadata_start_date": "2024-01-01",
+          "metadata_end_date": "2024-03-31",
+          "metadata_n_articles": "20",
+          "metadata_llm_judge_label": "-1",
+          "metadata_projected_l3": "1.070259"
+        },
+        {
+          "input": "Scenario: BP faces credit risk challenges in the energy sector during 2024-01-19 to 2024-04-18, driven by macroeconomic headwinds and regulatory changes.\nCompany: BP | Sector: energy | Risk: Credit Risk\nWindow: 2024-01-19 to 2024-04-18",
+          "output": "LLM Judge Label: UNKNOWN\nJustification: llm_skipped_rate_limited",
+          "predict_sredt": "1.961345",
+          "predict_flat_cosine": "0.620432",
+          "predict_keyword": "1.0",
+          "metadata_scenario_id": "scen_021",
+          "metadata_company": "BP",
+          "metadata_sector": "energy",
+          "metadata_risk_type": "Credit Risk",
+          "metadata_start_date": "2024-01-19",
+          "metadata_end_date": "2024-04-18",
+          "metadata_n_articles": "20",
+          "metadata_llm_judge_label": "-1",
+          "metadata_projected_l3": "1.226991"
+        },
+        {
+          "input": "Scenario: TotalEnergies faces market risk challenges in the energy sector during 2024-02-06 to 2024-05-06, driven by macroeconomic headwinds and regulatory changes.\nCompany: TotalEnergies | Sector: energy | Risk: Market Risk\nWindow: 2024-02-06 to 2024-05-06",
+          "output": "LLM Judge Label: UNKNOWN\nJustification: llm_skipped_rate_limited",
+          "predict_sredt": "2.081131",
+          "predict_flat_cosine": "0.592722",
+          "predict_keyword": "1.0",
+          "metadata_scenario_id": "scen_022",
+          "metadata_company": "TotalEnergies",
+          "metadata_sector": "energy",
+          "metadata_risk_type": "Market Risk",
+          "metadata_start_date": "2024-02-06",
+          "metadata_end_date": "2024-05-06",
+          "metadata_n_articles": "20",
+          "metadata_llm_judge_label": "-1",
+          "metadata_projected_l3": "1.301927"
+        }
+      ]
+    }
+  ]
+}
